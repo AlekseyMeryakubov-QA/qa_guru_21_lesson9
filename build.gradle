@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.meryakubov'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:24.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'com.codeborne:selenide:6.17.0'
+}
+
+test {
+    String tags = System.getProperty("tags") != null ? System.getProperty("tags") : "smoke"
+    useJUnitPlatform{
+        includeTags tags
+    }
+}
