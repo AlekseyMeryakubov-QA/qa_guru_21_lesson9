@@ -1,5 +1,5 @@
 package ru.meryakubov;
 
-public enum Locale {
-    GERMANY, ENGLISH
+public enum Locale{
+    Deutsch, English
 }
