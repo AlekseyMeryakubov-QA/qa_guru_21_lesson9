@@ -21,6 +21,7 @@ public class SimpleWebTest {
 
     @BeforeEach
     void setUp() {
+
         open("https://kinopoisk.ru/");
     }
 
